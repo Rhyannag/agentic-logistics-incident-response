@@ -1,8 +1,6 @@
 # agentic-logistics-incident-response
 Automated supply chain incident response system for PepsiCo using ServiceNow AI Agents and n8n. Calculates financial impact of delivery delays, selects optimal rerouting, and coordinates execution with logistics providers and customer notifications.
 
-Required sections:
-
 **System Overview**: Description of the automated supply chain incident processing system and its business impact for PepsiCo operations
 
 **Implementation Steps**: Key architectural decisions, AI agent configuration choices, and integration approaches used
