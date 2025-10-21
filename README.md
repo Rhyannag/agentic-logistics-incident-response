@@ -117,7 +117,7 @@ The n8n workflow was set up to take the webhook payload from ServiceNow and bran
 
 This ensured that the decision made in ServiceNow actually reached external stakeholders without me needing to manually notify anyone.
 
-> **Screenshot Placeholder**:  
+<img width="540" height="723" alt="image" src="https://github.com/user-attachments/assets/c91e6b64-2efb-43e5-8b95-1923d20be08e" />
 
 
 ---
@@ -255,9 +255,6 @@ I tested the end-to-end flow across multiple breakdown scenarios to validate fin
   - Webhook fired, Schneider and Whole Foods received payload.  
   - ServiceNow updated record to `dispatched`.  
 
-**Screenshot:**  
-![Baseline Execution](screenshots/baseline_execution.png)
-
 ---
 
 ### 5.2 Scenario 2: Webhook Failure
@@ -269,9 +266,6 @@ I tested the end-to-end flow across multiple breakdown scenarios to validate fin
   - No retries attempted, workflow required manual re-run.  
 
 **Lesson Learned:** Retry and backoff logic must be added so transient network failures don’t stop the system.  
-
-**Screenshot:**  
-![Webhook Failure](screenshots/webhook_failure.png)
 
 
 ### 5.4 Latency Measurements
