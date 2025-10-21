@@ -85,8 +85,6 @@ I had to build a **Calculated Impacts Script** because the ReAct engine sometime
 
 <img width="544" height="606" alt="image" src="https://github.com/user-attachments/assets/5fe4f7e2-e47b-48ce-8c03-04b2a47d92f0" />
 
-<img width="1037" height="410" alt="image" src="https://github.com/user-attachments/assets/34edb8d5-3354-41f1-9f9a-46e3e86d77ba" />
-
 
 ---
 
@@ -138,7 +136,8 @@ What used to take hours now happens in **under 1 minute**.
 ---
 
 
-## 3. Architecture Diagram  
+## 3. Architecture Diagram
+![System Architecture](Diagram.png)
 
 ## 4. Solution Overview
 
@@ -166,6 +165,7 @@ The goal was to move from **manual, error-prone handling of delivery delays** to
    - Status changes to `calculated`.
 
 
+<img width="1037" height="410" alt="image" src="https://github.com/user-attachments/assets/34edb8d5-3354-41f1-9f9a-46e3e86d77ba" />
 
 
 3. **Route Decision (Agent 2)**  
@@ -175,8 +175,8 @@ The goal was to move from **manual, error-prone handling of delivery delays** to
    - The linked incident urgency is escalated if penalties exceed thresholds.  
    - Status changes to `approved`.  
 
-   > **Screenshot Placeholder**:  
-   > ![Route Decision Agent](screenshots/agent2-decision.png)
+<img width="976" height="403" alt="image" src="https://github.com/user-attachments/assets/c9c69b3c-3bd5-494e-98cc-18b30fc781a8" />
+
 
 4. **External Coordination (n8n)**  
    - Once the decision is finalized, Agent 2 calls the **n8n webhook**.  
