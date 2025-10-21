@@ -1,1 +1,231 @@
+Webhook
+Success in 0s
+Output
+1 item
+headers
+host
+rhyannag28.app.n8n.cloud
+user-agent
+ServiceNow/1.0
+content-length
+152
+accept
+application/json
+accept-encoding
+gzip, br
+cdn-loop
+cloudflare; loops=1; subreqs=1
+cf-connecting-ip
+4.223.224.92
+cf-ew-via
+15
+cf-ipcountry
+SE
+cf-ray
+98f29fb127af2f72-ARN
+cf-visitor
+{"scheme":"https"}
+cf-worker
+n8n.cloud
+content-type
+application/json
+x-forwarded-for
+4.223.224.92, 104.23.221.201
+x-forwarded-host
+rhyannag28.app.n8n.cloud
+x-forwarded-port
+443
+x-forwarded-proto
+https
+x-forwarded-server
+traefik-prod-users-gwc-23-54c976d6d9-hggnc
+x-is-trusted
+yes
+x-real-ip
+4.223.224.92
+x-snc-integration-source
+818d1433c322a650d7299dcd2b013162
+
+
+
+AWS Bedrock Chat Model
+Success in 1.691s~234 Tokens
+INPUT
+1 item
+Human: {\n "truck_id": "8471",\n "chosen_option": {\n "option_id": "opt-2",\n "route_number": "5",\n "distance_miles": "139",\n "eta_minutes": "250"\n }\n}\n\nConnect to Logistics MCP Client Tool: execute_route –\n{\n "route_id": "321353",\n "truck_id": "8471",\n "chosen_option": {\n "option_id": "opt-2",\n "route_number": "5",\n "distance_miles": "139",\n "eta_minutes": "250"\n }\n}\n\nConnect to Retail MCP Client Tool: notify_delivery_delay –\n{\n "route_id": "321353",\n "truck_id": "8471",\n "chosen_option": {\n "option_id": "opt-2",\n "route_number": "5",\n "distance_miles": "139",\n "eta_minutes": "250"\n }\n}\n\nConnect to ServiceNow MCP Client Tool: update_execution_status –\n{\n "route_id": "321353",\n "status": "dispatched"\n}\n
+
+ 
+Logistics MCP Client
+Success in 111ms
+Input
+1 item
+query
+route_id
+321353
+truck_id
+8471
+chosen_option
+option_id
+opt-2
+route_number
+5
+distance_miles
+139
+eta_minutes
+250
+tool
+name
+execute_route
+description
+Mcp Execute Route\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json
+Output
+1 item
+headers
+host
+rhyannag28.app.n8n.cloud
+user-agent
+ServiceNow/1.0
+content-length
+152
+accept
+application/json
+accept-encoding
+gzip, br
+cdn-loop
+cloudflare; loops=1; subreqs=1
+cf-connecting-ip
+4.223.224.92
+cf-ew-via
+15
+cf-ipcountry
+SE
+cf-ray
+98f29fb127af2f72-ARN
+cf-visitor
+{"scheme":"https"}
+cf-worker
+n8n.cloud
+response
+response[0]
+type
+text
+text
+{\n "ok": true,\n "message": "route selected",\n "route_id": "321353",\n "truck_id": "8471",\n "chosen_option": {\n "option_id": "opt-2",\n "route_number": 5,\n "distance_miles": 139,\n "eta_minutes": 250\n }\n}
+
+
+Retail MCP Client
+Success in 105ms
+Input
+1 item
+query
+route_id
+321353
+truck_id
+8471
+chosen_option
+option_id
+opt-2
+route_number
+5
+distance_miles
+139
+eta_minutes
+250
+tool
+name
+notify_delivery_delay
+description
+Notify Delivery Delay\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json
+
+Output
+1 item
+headers
+host
+rhyannag28.app.n8n.cloud
+user-agent
+ServiceNow/1.0
+content-length
+152
+accept
+application/json
+accept-encoding
+gzip, br
+cdn-loop
+cloudflare; loops=1; subreqs=1
+cf-connecting-ip
+4.223.224.92
+cf-ew-via
+15
+cf-ipcountry
+SE
+cf-ray
+98f29fb127af2f72-ARN
+cf-visitor
+{"scheme":"https"}
+cf-worker
+n8n.cloud
+response
+response[0]
+type
+text
+text
+{\n "ok": true,\n "notification_id": "e00958b9-c557-451e-b8f3-79ea05da4ca5",\n "received_at": "2025-10-15T22:06:31.645500Z",\n "route_id": "321353",\n "truck_id": "8471",\n "chosen_option": {\n "option_id": "opt-2",\n "route_number": 5,\n "distance_miles": 139,\n "eta_minutes": 250\n }\n}
+
+ServiceNow MCP Client
+Success in 783ms
+Input
+1 item
+query
+route_id
+321353
+truck_id
+8471
+chosen_option
+option_id
+opt-2
+route_number
+5
+distance_miles
+139
+status
+dispatched
+tool
+name
+update_execution_status
+description
+Mcp Update Execution Status\n\nUpdate the calling SN instance's record(s) by route_id: status (+ optional chosen_option, incident_number, customer_id).\n\n### Responses:\n\n**200**: Successful Response (Success Response)\nContent-Type: application/json
+tput
+1 item
+headers
+host
+rhyannag28.app.n8n.cloud
+user-agent
+ServiceNow/1.0
+content-length
+152
+accept
+application/json
+accept-encoding
+gzip, br
+cdn-loop
+cloudflare; loops=1; subreqs=1
+cf-connecting-ip
+4.223.224.92
+cf-ew-via
+15
+cf-ipcountry
+SE
+cf-ray
+98f29fb127af2f72-ARN
+cf-visitor
+{"scheme":"https"}
+cf-worker
+n8n.cloud
+response
+response[0]
+type
+text
+text
+{\n "route_id": "321353",\n "updates": [\n {\n "student_id": "sn-0002",\n "instance": "https://kura-labs-jul-4728-0002.lab.service-now.com",\n "updated": true,\n "status_code": 200,\n "sys_id": "dc7dcb8415a472107f44c234ba329a67",\n "error": null\n }\n ]\n}
+
 
