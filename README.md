@@ -102,8 +102,7 @@ Once the financial impacts are calculated, **AI Agent 2** takes over.
 
 Finally, the agent fires the **n8n webhook** with the `route_id` and `chosen_option`.
 
-> **Screenshot Placeholder**:  
-
+<img width="540" height="723" alt="image" src="https://github.com/user-attachments/assets/c91e6b64-2efb-43e5-8b95-1923d20be08e" />
 
 ---
 
@@ -116,8 +115,6 @@ The n8n workflow was set up to take the webhook payload from ServiceNow and bran
 3. **Send `update_execution_status` back to ServiceNow** (for auditing).  
 
 This ensured that the decision made in ServiceNow actually reached external stakeholders without me needing to manually notify anyone.
-
-<img width="540" height="723" alt="image" src="https://github.com/user-attachments/assets/c91e6b64-2efb-43e5-8b95-1923d20be08e" />
 
 
 ---
