@@ -83,7 +83,10 @@ Configured **AI Agent 1** to pick up any record with `status = pending`.
 
 I had to build a **Calculated Impacts Script** because the ReAct engine sometimes treated numbers as text. The script parses values properly, subtracts delivery windows, and applies penalties accurately.
 
-> **Screenshot Placeholder**:  
+<img width="544" height="606" alt="image" src="https://github.com/user-attachments/assets/5fe4f7e2-e47b-48ce-8c03-04b2a47d92f0" />
+
+<img width="1037" height="410" alt="image" src="https://github.com/user-attachments/assets/34edb8d5-3354-41f1-9f9a-46e3e86d77ba" />
+
 
 ---
 
