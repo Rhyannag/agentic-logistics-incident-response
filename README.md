@@ -116,6 +116,9 @@ The n8n workflow was set up to take the webhook payload from ServiceNow and bran
 
 This ensured that the decision made in ServiceNow actually reached external stakeholders without me needing to manually notify anyone.
 
+<img width="447" height="302" alt="image" src="https://github.com/user-attachments/assets/e2938be3-1854-491e-8b51-ac3831ac6286" />
+
+
 
 ---
 
